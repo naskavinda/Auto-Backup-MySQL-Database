@@ -1,5 +1,6 @@
 @echo off
 
+:: You must provided you data in next four line 
 set dbUser=root
 set dbPassword="1234"
 set backupDir="D:\AutoBackUp"
