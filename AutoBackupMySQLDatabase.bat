@@ -1,6 +1,5 @@
 @echo off
 
-:: make sure to change the settings from line 4-9
 set dbUser=root
 set dbPassword="1234"
 set backupDir="D:\AutoBackUp"
