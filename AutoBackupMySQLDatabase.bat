@@ -3,6 +3,7 @@
 :: You must provided you data in next five line 
 set dbUser=root
 set dbPassword="1234"
+set port=3307
 set backupDir="D:\AutoBackUp"
 set mysqldump="C:\Program Files\MySQL\MySQL Server 5.7\bin\mysqldump"
 set databaseList=word sakila
@@ -25,6 +26,6 @@ if not exist %backupDir%\%dirName%\   mkdir %backupDir%\%dirName%
 
 for /d %%f in (%databaseList%) do (
 	  ::%mysqldump% -h "localhost" -P 3307 -u %dbUser% -p%dbPassword% %%a -r %backupDir%\%%f.sql
-      %mysqldump% --host="localhost" --protocol=tcp --port=3307 --user=%dbUser% -p%dbPassword% --single-transaction --add-drop-table --default-character-set=utf8 --databases %%f > %backupDir%\%dirName%\%%f.sql
+      %mysqldump% --host="localhost" --protocol=tcp --port=%port% --user=%dbUser% -p%dbPassword% --single-transaction --add-drop-table --default-character-set=utf8 --databases %%f > %backupDir%\%dirName%\%%f.sql
 )
 popd
