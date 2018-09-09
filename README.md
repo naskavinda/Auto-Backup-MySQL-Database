@@ -6,7 +6,7 @@
 `set mysqldump="C:\Program Files\MySQL\MySQL Server 5.7\bin\mysqldump"` // mysqldum.exe location. there provided the default location.<br/>
 `set databaseList=word sakila` // databases name you want to backup<br/>
 
-You must chage these five line in the code (line number 4 to 8) 
+You must chage these five line in the code (line number 4 to 9) 
 
 Other thing is make sure your system date formate is `sunday 09/30/2018` (dddd, MMMM d, yyyy) like this. if not change it like this or you have to chage code line 12 to 17 as your date formate. 
 
